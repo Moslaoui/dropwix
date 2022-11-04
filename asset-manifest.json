@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dropwix/static/css/main.1e1adf15.css",
+    "main.js": "/dropwix/static/js/main.9fe573bf.js",
+    "index.html": "/dropwix/index.html",
+    "main.1e1adf15.css.map": "/dropwix/static/css/main.1e1adf15.css.map",
+    "main.9fe573bf.js.map": "/dropwix/static/js/main.9fe573bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e1adf15.css",
+    "static/js/main.9fe573bf.js"
+  ]
+}
