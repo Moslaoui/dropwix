@@ -1,0 +1,25 @@
+.product-cont{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+
+    .products-section{
+
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        // margin-left: 40px;
+
+        .try{
+            position: absolute;
+            right: 0;
+
+
+        }
+        
+
+    }
+
+}

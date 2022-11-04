@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Layout from './components/layout/Layout';
+import Products from './pages/products/Products';
+import { Routes, Route} from 'react-router-dom';
+import '@tremor/react/dist/esm/tremor.css';
+import {createContext, useState} from 'react'
 
-function App() {
+
+export const ToggleContext = createContext()
+
+function App(props) {
+
+  const [isActive, setIsActive] = useState(false)
+
+
+  const handleToggle = event => {
+    setIsActive(current => !current)
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ToggleContext.Provider value={{isActive,handleToggle}}>
+    <Layout>
+      <Routes>
+        <Route path='/' >
+          <Route index element= { <Products></Products>} ></Route>
+        </Route>
+      </Routes>
+    </Layout>
+    </ToggleContext.Provider>
+    
   );
 }
 
