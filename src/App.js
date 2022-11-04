@@ -20,11 +20,12 @@ function App(props) {
   return (
     <ToggleContext.Provider value={{isActive,handleToggle}}>
     <Layout>
-      <Routes>
+      {/* <Routes>
         <Route path='/' >
           <Route index element= { <Products></Products>} ></Route>
         </Route>
-      </Routes>
+      </Routes> */}
+      <Products></Products>
     </Layout>
     </ToggleContext.Provider>
     
