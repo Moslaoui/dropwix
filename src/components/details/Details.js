@@ -7,11 +7,13 @@ import  {AiOutlineClose} from 'react-icons/ai'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import {useEffect} from 'react'
+import ProgressProvider from "./PorgressProvider";
 
 
 
 function Details({open, title, price, img, reviews, orders, rating, HeartActive, StoreActive, SaveActive, HandleOpen, HandleHeart, HandleSave, HandleStore}) {
 
+  
   useEffect(()=> {
     console.log('hello')
   },[HeartActive])
@@ -79,37 +81,54 @@ function Details({open, title, price, img, reviews, orders, rating, HeartActive,
             <div className="stats"> 
 
               <div className="saturation">
-                <CircularProgressbar 
+
+              <ProgressProvider valueStart={0} valueEnd={60}>
+                  {value => <CircularProgressbar value={value}
+                                                 text={`${value}%`}
+                                                 styles = {buildStyles({
+                                                  pathColor: '#0082BC',
+                                                  textColor: '#0082BC'
+                                                  
+                                                 })}  />}
+                </ProgressProvider>  
+
+
+                {/* <CircularProgressbar 
                 value={70}
                 text = '70%'
                 styles = {buildStyles({
                   pathColor: '#0082BC',
-                })} />
+                })} /> */}
               </div>
 
               <span className="seperator"></span>
 
               <div className="momentum">
-                <CircularProgressbar 
-                value={80}
-                text = '80%'
-                styles = {buildStyles({
-                  // pathColor: '#FF9F00',
-                  // textColor: '#FF9F00',
-                })}/>
+
+                <ProgressProvider valueStart={0} valueEnd={80}>
+                  {value => <CircularProgressbar value={value}
+                                                 text={`${value}%`}
+                                                 styles = {buildStyles({
+                                                  
+                                                 })}  />}
+                </ProgressProvider>                                 
+                
               </div>
 
               <span className="seperator"></span>
 
               <div className="price-compa">
-                <CircularProgressbar 
-                value={40}
-                text = '40%'
-                styles = {buildStyles({
-                  pathColor: '#6868AC',
-                  textColor: '#6868AC',
 
-                })}/>
+              <ProgressProvider valueStart={0} valueEnd={40}>
+                  {value => <CircularProgressbar value={value}
+                                                 text={`${value}%`}
+                                                 styles = {buildStyles({
+                                                  pathColor: '#6868AC',
+                                                  textColor: '#6868AC',
+                                                  
+                                                 })}  />}
+                </ProgressProvider>     
+
               </div>
 
             </div>
