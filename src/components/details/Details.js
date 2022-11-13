@@ -94,8 +94,8 @@ function Details({open, title, price, img, reviews, orders, rating, HeartActive,
                 value={80}
                 text = '80%'
                 styles = {buildStyles({
-                  pathColor: '#FF9F00',
-                  textColor: '#FF9F00',
+                  // pathColor: '#FF9F00',
+                  // textColor: '#FF9F00',
                 })}/>
               </div>
 
