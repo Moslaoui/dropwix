@@ -20,12 +20,11 @@ function App(props) {
   return (
     <ToggleContext.Provider value={{isActive,handleToggle}}>
     <Layout>
-      {/* <Routes>
-        <Route path='/' >
+      <Routes>
+        <Route path='/dropwix'>
           <Route index element= { <Products></Products>} ></Route>
         </Route>
-      </Routes> */}
-      <Products></Products>
+      </Routes>
     </Layout>
     </ToggleContext.Provider>
     

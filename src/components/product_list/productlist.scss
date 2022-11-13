@@ -1,20 +1,14 @@
 .products{
+    flex : 3;
     display: grid;
     justify-items: center;
-    grid-template-columns:repeat(5,1fr);
-    grid-gap: 50px;
+    grid-template-columns:repeat(auto-fit,minmax(185px,1fr));
+    grid-gap: 35px;
     width: 100%;
     margin: 10px 25px 10px;
     transition: 0.5s ease;
-    
+
 }
 
-.products.active{
-    display: grid;
-    justify-items: center;
-    grid-template-columns:repeat(4,1fr);
-    grid-gap: 50px;
-    width: 100%;
-    margin: 10px 25px 10px;
-    
-}
+
+

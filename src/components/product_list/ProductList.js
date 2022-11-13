@@ -2,13 +2,9 @@ import './productlist.scss'
 import Product from '../product/Product'
 import data from './sample.json'
 import {useState} from 'react'
-import {useContext} from 'react'
-import { ToggleContext } from '../../App'
 
 
 function ProductList()  {
-
-  const ToggleTheme = useContext(ToggleContext)
 
   const [appState, changeState] = useState(
     {
@@ -30,7 +26,7 @@ function ProductList()  {
 
 
   return (
-    <div className={ToggleTheme.isActive? 'products active' : 'products'}>
+    <div className='products'>
         
         {
             data.map((e) => {

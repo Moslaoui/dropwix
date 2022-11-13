@@ -2,11 +2,11 @@ import './product.scss'
 import {AiFillStar} from 'react-icons/ai'
 import {BsHeartFill} from 'react-icons/bs'
 import {BsBookmarkPlusFill} from 'react-icons/bs'
-import {BiStore, BiToggleRight} from 'react-icons/bi'
+import {BiStore} from 'react-icons/bi'
 import {FiExternalLink} from 'react-icons/fi'
 import {useState} from 'react'
 
-function Product({title,link,img,price,rating,handleclick,Styleactive}) {
+function Product({title,link,img,price,rating,orders,reviews,handleclick,Styleactive}) {
 
   const [HeartActive, setIsHeart] = useState(false)
   const [SaveActive, setIsSave] = useState(false)
@@ -22,25 +22,36 @@ function Product({title,link,img,price,rating,handleclick,Styleactive}) {
     setIsStore(current => !current)
   };
 
+
   
   return (
 
-        <div className={Styleactive(link)}  onClick={()=> {
-          handleclick(link)
-        }}>
+        <div className={Styleactive(link)} >
           <div className='img-cont'>
-            <img className='img' src={img} alt="" />
+            <img className='img'  src={img} onClick={()=> {
+          handleclick(link,orders,title,img,
+            price,rating,reviews,
+            HeartActive,SaveActive,StoreActive,
+            handleHeart,handleSave,handleStore)
+        }} />
+            
             <div className='action'><a href={link}><FiExternalLink className='icon'></FiExternalLink></a></div>
           </div>
           <div className="actions">
             <div className='action'>
               <BsHeartFill className={HeartActive? 'icon active': 'icon'} onClick={handleHeart}>
               </BsHeartFill></div>
-            <div className='action'><BsBookmarkPlusFill className= {SaveActive? 'icon active': 'icon'} onClick={handleSave}></BsBookmarkPlusFill></div>
-            <div className='action'><BiStore className= {StoreActive? 'icon active': 'icon'} onClick={handleStore}></BiStore></div>
+            <div className='action'>
+              <BsBookmarkPlusFill className= {SaveActive? 'icon active': 'icon'} onClick={handleSave}>
+                </BsBookmarkPlusFill></div>
+            <div className='action'>
+              <BiStore className= {StoreActive? 'icon active': 'icon'} onClick={handleStore}>
+                </BiStore></div>
           </div>
 
-          <div className='information'>
+          <div className='information' onClick={()=> {
+          handleclick(link,orders,title,img,price,rating,reviews,HeartActive,SaveActive,StoreActive,handleHeart,handleSave,handleStore)
+        }}>
             <span className='title'>{title}</span>
             <div className="bottom">
               <span className='price'>{price}</span>
