@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dropwix/static/css/main.84e1e15b.css",
-    "main.js": "/dropwix/static/js/main.b8dd56fd.js",
+    "main.css": "/dropwix/static/css/main.b4b0ca59.css",
+    "main.js": "/dropwix/static/js/main.532a0e36.js",
     "index.html": "/dropwix/index.html",
-    "main.84e1e15b.css.map": "/dropwix/static/css/main.84e1e15b.css.map",
-    "main.b8dd56fd.js.map": "/dropwix/static/js/main.b8dd56fd.js.map"
+    "main.b4b0ca59.css.map": "/dropwix/static/css/main.b4b0ca59.css.map",
+    "main.532a0e36.js.map": "/dropwix/static/js/main.532a0e36.js.map"
   },
   "entrypoints": [
-    "static/css/main.84e1e15b.css",
-    "static/js/main.b8dd56fd.js"
+    "static/css/main.b4b0ca59.css",
+    "static/js/main.532a0e36.js"
   ]
 }
