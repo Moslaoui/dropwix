@@ -1,7 +1,6 @@
 import './layout.scss'
 import Navbar from '../navbar/Navbar'
 import Sidebar from '../sidebar/Sidebar'
-import Home from '../../pages/home/Home'
 import {useContext} from 'react'
 import { ToggleContext } from '../../App'
 

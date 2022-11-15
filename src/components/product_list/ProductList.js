@@ -24,7 +24,7 @@ function ProductList()  {
     }
   }
 
-
+  
   return (
     <div className='products'>
         

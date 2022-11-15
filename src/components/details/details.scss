@@ -7,7 +7,7 @@
 
     .card-d {
     width: 70vh;
-    height: 100vh;
+    height: 100%;
     position: sticky;
     top: 125px;   
     border-radius: 100px 100px 0px 00px;
@@ -28,6 +28,7 @@
         box-sizing: border-box;
         // width: 90%;
         // margin-left: 10px;
+       
         
         .card-img {
             width: 100%;
@@ -40,7 +41,7 @@
                 width: 100%;
                 object-fit: cover;
                 border-radius: 100px 100px 0px 0px;
-                // animation: introLoad 1.5s forwards;
+                animation: introLoad 1.5s forwards;
                 // box-shadow: 0px 4px 3px rgba(32, 33, 36, 0.2);
             }
 
@@ -129,45 +130,45 @@
             }
             }
 
-            .actions {
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                position: absolute;
-                top: 0;
-                right: 0;
-                margin: 10px;
+            // .actions {
+            //     display: flex;
+            //     align-items: center;
+            //     gap: 5px;
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            //     margin: 10px;
                 
-                .action {
-                    background-color: white;
-                    border: 1.5px solid #f1f3f4 ;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                    height: 35px;
-                    width: 35px;
-                    cursor: pointer;
+            //     .action {
+            //         background-color: white;
+            //         border: 1.5px solid #f1f3f4 ;
+            //         display: flex;
+            //         align-items: center;
+            //         justify-content: center;
+            //         border-radius: 50%;
+            //         height: 35px;
+            //         width: 35px;
+            //         cursor: pointer;
 
-                    .icon{
-                        position: relative;
-                        font-size: larger;
-                        color: #71717192;
-                        transition: 0.3s ease;
+            //         .icon{
+            //             position: relative;
+            //             font-size: larger;
+            //             color: #71717192;
+            //             transition: 0.3s ease;
     
-                        &:hover{
-                            color: #6868AC;
-                            transform: scale(1.1);  
+            //             &:hover{
+            //                 color: #6868AC;
+            //                 transform: scale(1.1);  
     
-                        }
-                    }
+            //             }
+            //         }
 
-                    .icon.active{
-                        color: #6868AC;
-                    }
+            //         .icon.active{
+            //             color: #6868AC;
+            //         }
 
-                }
-            }
+            //     }
+            // }
     }
 
     .card-bottom {
@@ -259,7 +260,7 @@
             border-radius: 50px;
             // border: 1px solid #6868AC;
             margin-left: 15px;
-            background-color: #6868AC;
+            background: #6868AC;
             padding: 3px 10px;
 
             .price{
