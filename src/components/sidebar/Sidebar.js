@@ -48,16 +48,19 @@ function Sidebar() {
     <div className={ToggleTheme.isActive? 'navigation active': 'navigation'}>
         <ul>
             {appState.objects.map((e) => (
-            <Link to={e.link} style={{textDecoration: 'none'}} >
+           
             <li key={e.id} className={ToggleActiveStyle(e.id)} onClick = {() => {
                 ToggleActive(e.id)
             }}>
+                 <Link to={e.link} style={{textDecoration: 'none'}} >
                 <a href="#">
                     <span className="icon-contenair">{e.icon}</span>
                     <span className={ToggleTheme.isActive? 'title active' : 'title'}>{e.title}</span>
                 </a>
+                </Link>
+                
             </li>
-            </Link>
+           
             ))}
             
         </ul>

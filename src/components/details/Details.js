@@ -13,11 +13,6 @@ import ProgressProvider from "./PorgressProvider";
 
 function Details({open, title, price, img, reviews, orders, rating, HeartActive, StoreActive, SaveActive, HandleOpen, HandleHeart, HandleSave, HandleStore}) {
 
-  
-  useEffect(()=> {
-    console.log('hello')
-  },[HeartActive])
-
   if (!open) return null
   return (
     <div className="details">

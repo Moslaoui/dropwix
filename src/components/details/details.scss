@@ -6,11 +6,12 @@
     transition: 0.5s ease-in-out;
 
     .card-d {
+
     width: 70vh;
-    height: 100vh;
+    height: 85vh;
     position: sticky;
     top: 125px;   
-    border-radius: 100px 100px 0px 00px;
+    border-radius: 100px 100px 100px 100px;
     box-sizing: border-box;
     border-width: 1.5px ;
     border-style: solid;
@@ -174,7 +175,7 @@
     .card-bottom {
         background-color: #FFFFFF;
         width: 100%;
-        height: 100vh;
+        // height: 100vh;
         box-sizing: border-box;
         margin-top: -20px;
         z-index: 999;

@@ -64,7 +64,7 @@ function Products() {
 
   return (
     <div className="product-cont">
-      <Filter className="filter"></Filter>
+      <Filter></Filter>
       <div className="products-section">
         <div className="products">
         {
