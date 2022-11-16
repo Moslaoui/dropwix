@@ -1,26 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googlepis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
 
-.saved-page {
+.saved {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    position: relative;
-    font-family: 'Poppins', sans-serif;
+    display: flex;
+    // flex-direction: column;
 
-    .saved-part{
-        margin: 0px 25px;
+    .left-part{
+        margin: 25px;
+        flex: 3;
 
-        .saved-prod{
-            margin-top: 20px;
-            border: 1.5px solid #f1f3f4;
-            border-radius: 30px;
-            padding: 5px;
-           
-            .title{
-                padding: 2px;
-               
+        .saved-content, .sugg{
+
+            .saved-title{
+                font-size: 1.2em;
+                font-weight: 600;
+                color: #252525;
+                // letter-spacing: 0.5px;
+                font-family: 'Poppins', sans-serif;
             }
 
+            .saved-items{
+                // margin-top: -10px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                border: 1.5px solid #f1f3f4 ;
+                border-radius: 10px 60px 10px 10px;
+                background-color: #f5f5f530 ;
+
+                .items {
+                    padding: 20px;
+                    display: grid;
+                    justify-items: center;
+                    grid-template-columns:repeat(auto-fill,minmax(185px,1fr));
+                    grid-gap: 20px;
+                    // width: 100%;
+                    // margin: 10px 25px 10px;
+                    transition: 0.5s ease;
+
+                }
+
+                .load-more{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                    font-family: 'Poppins', sans-serif;
+
+                    
+                    p{
+                        display: inline-block;
+                        border: 1px solid #f1f3f4;
+                        border-radius: 30px;
+                        background-color: #f3f4f4;
+                        color: #252525;
+                        padding: 5px 3em;
+                        margin: auto;
+                        font-size: 1em;
+
+                        &:hover{
+                            background-color: #e7e3e3 ;
+                        }
+                        
+                    }
+
+                    
+
+
+                }
+            }
         }
     }
+
 }
