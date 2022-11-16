@@ -25,7 +25,7 @@ function App(props) {
         <Route path='/'>
           <Route index element = { <Home></Home> }></Route>
           <Route path='products' element= { <Products></Products>}></Route>
-          <Route path='saved' element= { <Saved></Saved> }></Route>
+          {/* <Route path='saved' element= { <Saved></Saved> }></Route> */}
         </Route>
       </Routes>
     </Layout>
